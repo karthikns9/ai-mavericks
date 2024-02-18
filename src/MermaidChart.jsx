@@ -15,14 +15,6 @@ const Mermaid = ({ chart }) => {
 };
 
 const MermaidChart = ({ apiResponse }) => {
-  console.log('invoked');
-  const mermaidCode = `
-    flowchart TD
-      Inbound{{Inbound: 'brighttalk'}}
-      Inbound --> Governance{"Governance Status: Stuck"}
-      Governance --> Outbound{{Outbound: 'forms'}}
-  `;
-
   return (
     <div className="mermaid-chart-container">
       {apiResponse ? (

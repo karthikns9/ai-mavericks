@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Chat from './Chat';
-import MermaidChart from './MermaidChart';
 
 const ChatContainer = () => {
     console.log('chat container')
@@ -31,7 +30,6 @@ const ChatContainer = () => {
   return (
     <div className="">
       <Chat onSend={handleSend} apiResponse = {apiResponse} />
-      {/* {(apiResponse?.includes('flowhcart') || apiResponse?.includes('graph')) ? <MermaidChart apiResponse={apiResponse} /> : null} */}
     </div>
   );
 };
