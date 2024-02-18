@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ChatContainer from "./ChatContainer";
+// import ReactStoreIndicator from 'react-score-indicator'
+import './App.css'
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ChatContainer />
+      {/* <div className="score">
+        <ReactStoreIndicator
+            value={30}
+            maxValue={100}/>
+      </div> */}
     </div>
   );
-}
+};
 
 export default App;

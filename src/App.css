@@ -28,6 +28,13 @@
   color: #61dafb;
 }
 
+.score{
+    width: 200px;
+    float: right;
+    margin-top: -176px;
+    margin-right: 451px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
