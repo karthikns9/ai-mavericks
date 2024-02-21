@@ -10,7 +10,6 @@ import { Input, Button, MessageList   } from 'react-chat-elements'
 function ChatElement(props){
 
     const handleSend = (arg) => {
-        console.log(arg);
         // const userMessage = `User: ${newMessage}`;
         // const botMessage = props?.apiResponse
     

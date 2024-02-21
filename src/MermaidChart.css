@@ -5,6 +5,8 @@
   
   /* Add additional styles as needed */
   .mermaid {
-    /* Add styling for the mermaid chart if necessary */
+    float: left;
+    width: 50%;
+    margin-top: 5px;
   }
   

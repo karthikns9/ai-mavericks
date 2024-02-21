@@ -43,3 +43,58 @@
     transform: rotate(360deg);
   }
 }
+
+.app-container {
+  /* padding: 20px;
+  display: flex;
+  height: 95vh; */
+  /* padding: 20px; */
+  
+  height: 75vh;
+  width: 70%;
+  display: flex;
+  float: inline-end;
+  margin-top: 250px;
+  background: #fff;
+}
+
+.tab-container {
+  display: flex;
+  margin-bottom: 20px;
+  /* margin-left: 41%; */
+  gap: 2rem;
+  padding: 1rem;
+  flex-direction: column;
+  /* background-color: lightgray; */
+  border-right: 1px solid gray;
+  justify-content: center;
+}
+
+.tab-container > div {
+  cursor: pointer;
+}
+
+
+
+button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button.active {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.tacontentb-{
+  flex:1;
+}
+
+.active {
+  background-color: lightblue;
+  
+}

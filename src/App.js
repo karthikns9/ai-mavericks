@@ -1,18 +1,43 @@
-import React from "react";
-import ChatContainer from "./ChatContainer";
-// import ReactStoreIndicator from 'react-score-indicator'
+import React, { useState } from "react";
 import './App.css'
+import { ChatProvider } from "./ChatContext";
+import Chat from "./Chat";
 
 const App = () => {
+
+  const [activeTab, setActiveTab] = useState('leadAssistance');
+
+  const handleTabChange = (tabName) => {
+    setActiveTab(tabName);
+  };
+
   return (
-    <div className="App">
-      <ChatContainer />
-      {/* <div className="score">
-        <ReactStoreIndicator
-            value={30}
-            maxValue={100}/>
+
+    <ChatProvider>
+      <div className="App app-container">
+      {/* <div className="tab-container">
+        <div
+          className={activeTab === 'leadScore' ? 'active' : ''}
+         onClick={() => handleTabChange('leadScore')}
+        >
+          Lead Score
+        </div>
+        <div
+          className={activeTab === 'leadAssistance' ? 'active' : ''}
+          onClick={() => handleTabChange('leadAssistance')}
+        >
+          Lead Assistance Chat
+        </div>
       </div> */}
+
+      <div className="tacontentb-">
+        {/* {activeTab === 'leadScore' && <LeadScore />}
+        {activeTab === 'leadAssistance' && <ChatContainer />} */}
+        <Chat/>
+      </div>
     </div>
+    </ChatProvider>
+    
   );
 };
 

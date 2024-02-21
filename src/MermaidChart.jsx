@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import mermaid from 'mermaid';
 import './MermaidChart.css';
+import './Chat.css';
+import { MessageBox } from 'react-chat-elements';
 
 mermaid.initialize({
   startOnLoad: true,
@@ -19,6 +21,14 @@ const MermaidChart = ({ apiResponse }) => {
     <div className="mermaid-chart-container">
       {apiResponse ? (
         <div>
+           <MessageBox
+          position='left'
+          title='AI Mavericks'
+          type='text'
+          text='Please refer to the flow chart below.'
+          date={new Date()}
+          replyButton={true}
+        />
           <Mermaid chart={apiResponse} />
         </div>
       ) : (

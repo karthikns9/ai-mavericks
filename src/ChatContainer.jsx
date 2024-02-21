@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Chat from './Chat';
+import { useChatContext } from './ChatContext';
 
 const ChatContainer = () => {
-    console.log('chat container')
-  const [apiResponse, setApiResponse] = useState(null);
+  const { chatData, addMessageToChat } = useChatContext();
 
   const handleSend = async (newMessage) => {
-    console.log('new', newMessage);
     try {
       const response = await fetch('https://localhost:7207/WeatherForecast/processText', {
         method: 'POST',
@@ -18,7 +17,8 @@ const ChatContainer = () => {
 
       if (response.ok) {
         const data = await response.text();
-        setApiResponse(data);
+       
+        addMessageToChat(data);
       } else {
         console.error(`Error: ${response.status} - ${response.statusText}`);
       }
@@ -28,8 +28,9 @@ const ChatContainer = () => {
   };
 
   return (
-    <div className="">
-      <Chat onSend={handleSend} apiResponse = {apiResponse} />
+    <div className=""
+    style={{height:"99%"}}>
+      <Chat onSend={handleSend} apiResponse = {chatData} />
     </div>
   );
 };
