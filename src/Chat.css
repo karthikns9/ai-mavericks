@@ -73,6 +73,9 @@
 .rce-mbox-left-notch{
   fill: #ecf0f1 !important;
 }
+.rce-mbox-text{
+  text-align: left;
+}
 .rce-container-mbox{
   margin-top: 10px;
 }
